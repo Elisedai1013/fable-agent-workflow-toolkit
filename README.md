@@ -6,8 +6,11 @@
 
 **让 Agent 先识别自己处于哪个工作阶段，再用最小必要方法推进：执行前找未知，执行中留偏差，完成后确认理解。**
 
-![Agent Skill](https://img.shields.io/badge/Agent%20Skill-compatible-111827?style=flat-square)
-![Methods](https://img.shields.io/badge/methods-6-C65F35?style=flat-square)
+<p>
+  <a href="https://agentskills.io/"><img src="https://img.shields.io/badge/Agent_Skills-compatible-111827?style=flat-square" alt="Agent Skills compatible"></a>
+  <img src="https://img.shields.io/badge/Methods-6-C65F35?style=flat-square" alt="6 methods">
+  <img src="https://img.shields.io/badge/Language-中文-555555?style=flat-square" alt="Language: Chinese">
+</p>
 
 <a href="https://www.youtube.com/watch?v=9fubhllmsBU">
   <img src="assets/ai-builders-01-cover-landscape.jpg" alt="AI Builders 解读 01：模型变强，人机协作也要重做" width="760">
@@ -40,33 +43,38 @@
 
 ## 安装
 
-### 在 Codex 中安装
+核心 Skill 位于 [`skills/steer-agent-workflow`](skills/steer-agent-workflow)。请复制整个目录，而不是只复制 `SKILL.md`，否则 Agent 无法读取完整方法卡。
 
-把下面这句话交给 Codex：
-
-```text
-请使用 $skill-installer 安装这个 Skill：https://github.com/Elisedai1013/fable-agent-workflow-skill/tree/main/skills/steer-agent-workflow
-```
-
-安装完成后，在下一轮对话中即可使用；如果客户端尚未刷新 Skill 列表，再重新启动 Codex。
+`SKILL.md` 使用平台无关的工作流指令，不依赖 Codex 专属工具。`agents/openai.yaml` 只提供可选的 OpenAI/Codex 客户端展示信息，不影响其他 Agent 使用。
 
 <details>
-<summary><strong>手动安装</strong></summary>
+<summary><strong>查看不同 Agent 的安装方式</strong></summary>
 
-```bash
-git clone https://github.com/Elisedai1013/fable-agent-workflow-skill.git
-mkdir -p ~/.codex/skills
-cp -R fable-agent-workflow-skill/skills/steer-agent-workflow ~/.codex/skills/
+| 使用环境 | 安装位置 | 调用方式 |
+| --- | --- | --- |
+| Agent Skills-compatible client | 按该客户端规定的 Skill 目录复制完整文件夹 | 自然语言或客户端规定的调用方式 |
+| GitHub Copilot | 项目内 `.agents/skills/steer-agent-workflow/` 或个人目录 `~/.agents/skills/steer-agent-workflow/` | 根据 `description` 自动选择 |
+| Claude Code | `~/.claude/skills/steer-agent-workflow/` 或项目内 `.claude/skills/` | `/steer-agent-workflow` |
+| OpenAI Codex | `~/.codex/skills/steer-agent-workflow/` | `$steer-agent-workflow` |
+| 其他 Agent | 将整个目录加入 Agent 可读取的上下文 | 要求先读取 `SKILL.md` |
+
+通用格式与具体路径可参考 [Agent Skills 规范](https://agentskills.io/specification)、[Claude Code Skills](https://code.claude.com/docs/en/slash-commands) 与 [GitHub Copilot Agent Skills](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills)。
+
+在 Codex 中也可以直接说：
+
+```text
+请使用 $skill-installer 安装这个 Skill：
+https://github.com/Elisedai1013/steer-agent-workflow-skill/tree/main/skills/steer-agent-workflow
 ```
 
 </details>
 
 ## 30 秒开始使用
 
-可以显式调用 Skill：
+可以直接用自然语言点名 Skill：
 
 ```text
-使用 $steer-agent-workflow。
+使用 Steer Agent Workflow Skill。
 
 我准备让 Agent 完成一个我不熟悉的认证模块。先识别当前阶段，选择最小必要方法，帮我找出会改变架构、安全或权限设计的盲点；先不要实现。
 ```
@@ -116,12 +124,12 @@ Skill 会把工作区分为四层：
 skills/steer-agent-workflow/
 ├── SKILL.md                 # 触发条件、阶段路由、证据分层和输出契约
 ├── agents/
-│   └── openai.yaml          # Codex 展示名与默认调用示例
+│   └── openai.yaml          # 可选：OpenAI/Codex 客户端展示信息
 └── references/
     └── method-cards.md      # 六种方法的触发条件、执行步骤、产出和边界
 ```
 
-仓库根目录只保留 Skill 的发布说明、来源归属和展示素材；不再提供一份需要手动复制的 Prompt 合集。
+仓库根目录只保留 Skill 的发布说明、来源归属和展示素材；不再提供一份需要手动复制的 Prompt 合集。通用运行逻辑只依赖 `SKILL.md` 及其相对引用的 `references/`，其他客户端可以忽略 `agents/openai.yaml`。
 
 ## 方法来源与归属
 
