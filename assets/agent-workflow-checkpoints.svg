@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Agent 工作流的三个检查阶段</title>
+  <desc id="desc">执行前用盲点扫描、差异化原型、逐题访谈和参考实现补全地图；执行中记录偏差；完成后用总结和反向测验确认人仍理解关键决策。</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0b0b"/>
+      <stop offset="1" stop-color="#1a1410"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9f4529"/>
+      <stop offset="1" stop-color="#d0784f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" rx="28" fill="url(#background)"/>
+  <path d="M40 2h1120" stroke="url(#accent)" stroke-width="4"/>
+
+  <text x="54" y="56" fill="#c7653d" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" font-weight="700" letter-spacing="3">AGENT WORKFLOW CHECKPOINTS</text>
+  <text x="54" y="88" fill="#b7aa9a" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="16">让 Agent 走得更远，也让关键判断始终可见</text>
+
+  <g transform="translate(54 120)">
+    <rect width="490" height="192" rx="20" fill="#151515" stroke="#3c332d"/>
+    <text x="24" y="38" fill="#c7653d" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" font-weight="700">BEFORE · 执行前</text>
+    <text x="24" y="80" fill="#f3eadc" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="28" font-weight="700">补全任务地图</text>
+    <text x="24" y="110" fill="#a99e92" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15">先发现未知，再决定怎样执行</text>
+
+    <g transform="translate(24 130)" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="14">
+      <rect width="96" height="36" rx="18" fill="#241b17" stroke="#74402d"/>
+      <text x="48" y="23" text-anchor="middle" fill="#e5c0a8">盲点扫描</text>
+      <rect x="106" width="112" height="36" rx="18" fill="#241b17" stroke="#74402d"/>
+      <text x="162" y="23" text-anchor="middle" fill="#e5c0a8">差异化原型</text>
+      <rect x="228" width="108" height="36" rx="18" fill="#241b17" stroke="#74402d"/>
+      <text x="282" y="23" text-anchor="middle" fill="#e5c0a8">逐题访谈</text>
+      <rect x="346" width="96" height="36" rx="18" fill="#241b17" stroke="#74402d"/>
+      <text x="394" y="23" text-anchor="middle" fill="#e5c0a8">参考实现</text>
+    </g>
+  </g>
+
+  <path d="M554 216h20" stroke="#b95634" stroke-width="3" stroke-linecap="round"/>
+  <path d="M566 206l10 10-10 10" fill="none" stroke="#b95634" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(584 120)">
+    <rect width="250" height="192" rx="20" fill="#151515" stroke="#3c332d"/>
+    <text x="24" y="38" fill="#c7653d" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" font-weight="700">DURING · 执行中</text>
+    <text x="24" y="80" fill="#f3eadc" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="28" font-weight="700">记录偏差</text>
+    <text x="24" y="110" fill="#a99e92" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15">看见地图之外的决策</text>
+    <rect x="24" y="130" width="160" height="36" rx="18" fill="#241b17" stroke="#74402d"/>
+    <text x="104" y="153" text-anchor="middle" fill="#e5c0a8" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="14">implementation notes</text>
+  </g>
+
+  <path d="M844 216h20" stroke="#b95634" stroke-width="3" stroke-linecap="round"/>
+  <path d="M856 206l10 10-10 10" fill="none" stroke="#b95634" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(874 120)">
+    <rect width="272" height="192" rx="20" fill="#1d1511" stroke="#b95634"/>
+    <circle cx="240" cy="30" r="7" fill="#c7653d"/>
+    <text x="24" y="38" fill="#c7653d" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15" font-weight="700">AFTER · 完成后</text>
+    <text x="24" y="80" fill="#f3eadc" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="28" font-weight="700">确认理解</text>
+    <text x="24" y="110" fill="#a99e92" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="15">人仍能解释并承担结果</text>
+    <rect x="24" y="130" width="158" height="36" rx="18" fill="#2a1b15" stroke="#9f4529"/>
+    <text x="103" y="153" text-anchor="middle" fill="#efd1bd" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="14">总结 + 反向测验</text>
+  </g>
+
+  <path d="M1008 331c0 24-20 36-48 36H232c-28 0-48-12-48-36" fill="none" stroke="#574238" stroke-width="2" stroke-dasharray="6 8"/>
+  <path d="M174 340l10-10 10 10" fill="none" stroke="#b95634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="360" text-anchor="middle" fill="#7e7167" font-family="system-ui,-apple-system,'PingFang SC',sans-serif" font-size="14">任务地图 → 真实疆域 → 人保持在关键决策循环中</text>
+</svg>
