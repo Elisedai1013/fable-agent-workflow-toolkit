@@ -17,7 +17,7 @@ The promotional cover and creator QR image included for README display are not c
 
 The source methods and English terms `blind spot pass`, `brainstorms and prototypes`, `interviews`, `references`, `implementation notes`, and `quiz me` are attributed to Thariq Shihipar’s talk.
 
-The six Chinese templates, output structures, additional safety rules, and combined workflow were editorially developed by Elisedai for AI Builders 解读 01. They are not official prompts or workflows published by Thariq Shihipar or Anthropic.
+The Chinese method cards, output structures, additional permission and safety rules, and before/during/after Skill routing were editorially developed by Elisedai for AI Builders 解读 01. They are not an official Skill or workflow published by Thariq Shihipar or Anthropic.
 
 ## Trademarks
 
