@@ -79,8 +79,8 @@
 <summary><strong>克隆到本地</strong></summary>
 
 ```bash
-git clone https://github.com/Elisedai1013/ai-builders-toolkit-01-agent-workflow.git
-cd ai-builders-toolkit-01-agent-workflow
+git clone https://github.com/Elisedai1013/fable-agent-workflow-toolkit.git
+cd fable-agent-workflow-toolkit
 ```
 
 </details>
